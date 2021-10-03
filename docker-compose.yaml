@@ -1,0 +1,13 @@
+version: '3.9'
+networks:
+    my-bridge-network:
+        external: true
+services:
+  back-end:
+    image: josuegcardoso/projeto1-back-end
+    mem_limit: 512M
+    command: --cpu 1
+    ports:
+      - "9090:3000"
+    networks:
+      - my-bridge-network
