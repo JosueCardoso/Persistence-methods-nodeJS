@@ -13,6 +13,12 @@ const sqlService = new SqlManager(app);
 const NoSqlManager = require('./services/no_sql/noSqlService.js').NoSqlService;
 const noSqlService = new NoSqlManager(app);
 
+const CacheSqlManager = require('./services/cache_sql/cacheSqlService').CacheSqlServer;
+const cacheSqlService = new CacheSqlManager(app);
+
+const CacheNoSqlManager = require('./services/cache_no_sql/cacheNoSqlService.js').CacheNoSqlService;
+const cacheNoSqlService = new CacheNoSqlManager(app);
+
 app.listen(port, () => {
     console.log(`App is listening at http://localhost:${port}`);
  });
