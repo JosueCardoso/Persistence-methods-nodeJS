@@ -5,7 +5,7 @@ networks:
 services:
   back-end:
     image: josuegcardoso/projeto1-back-end
-    mem_limit: 512M
+    mem_limit: 256M
     command: --cpu 1
     ports:
       - "9090:3000"
